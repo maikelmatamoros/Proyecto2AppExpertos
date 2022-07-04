@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Proyecto2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_hotel">Hoteles</string>
+    <string name="menu_car">Rent-a-Car</string>
+    <string name="menu_gallery">Galería</string>
+    <string name="menu_tips">Tips</string>
+    <string name="menu_atractivos">Atráctivos</string>
+    <string name="menu_slideshow">Slideshow</string>s
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="tips_title">Viva aventuras de forma segura</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Vacunas_Title">Vacunas</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tipsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/tips_title"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/tipsImg"
+                android:layout_width="match_parent"
+                android:layout_height="289dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/tips" />
+
+            <TextView
+                android:id="@+id/vacunaTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/Vacunas_Title"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vacunaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Costa Rica es uno de los países con mejor asistencia en salud, tanto privada como pública. Se recomienda contar con las vacunas básicas para la hepatitis A y B, así como la rabia y el tétanos, antes de su llegada al país.  \n \nComo requisito de entrada al país le solicitarán el certificado de vacuna contra la fiebre amarilla cuando viaje desde países en África (Angola, Benin, Burkina Faso, Camerún, República Democrática del Congo, Gabón, Gambia, Guinea, Liberia, Nigeria, Sierra Leona, Sudán), Venezuela , Colombia, Perú, Ecuador, Brasil y la República de Guyana. La vacuna debe administrarse al menos 10 días antes de la fecha de inicio de su viaje." />
+
+            <TextView
+                android:id="@+id/viajeLigeroTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Viaje Ligero"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/viajeLigeroText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Viajar con poco equipaje siempre será una excelente decisión. Si hay alguna manera de evitar registrar el equipaje, adelante inténtelo. Podrá aprovechar la lavandería del hotel, y durante su viaje cuanto menos deba cargar, mejor. Si está facturando equipaje, recuerde pesar las maletas antes de registrarlas y entregarlas a la aerolínea.
+                \n \nTrate de empacar solo lo que sea necesario, ropa fresca que sea fácil de lavar y secar, ya que las aerolíneas y los operadores turísticos tienen restricciones de peso en el equipaje, y probablemente se trasladará de un lugar a otro.
+                \n \nIncluya en su equipaje todos los medicamentos que pueda necesitar en caso de una afección médica, ya que, algunos de ellos requieren una receta médica certificada para su venta." />
+
+            <TextView
+                android:id="@+id/hospedajeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hospedaje"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
