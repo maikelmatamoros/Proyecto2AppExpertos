@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/aboutUs1img"
+                android:layout_width="444dp"
+                android:layout_height="302dp"
+                android:src="@drawable/about_us1"
+                app:srcCompat="@drawable/about_us1" />
+
+            <TextView
+                android:id="@+id/expertosTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text=" Expertos Travel Agency \n (Naturaleza, aventura y más)"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/expertosText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Somos una empresa conformada por un grupo de amigos, ubicada en el cantón de Turrialba. Estamos más que ansiosos por brindarle el mejor servicio y atención. Debido al amor que sentimos por nuestro país, nos complace compartir Costa Rica con usted. El turismo ha sido nuestro negocio durante muchos años y eso nos ha brindado la experiencia que necesitamos para satisfacer sus necesidades. Podemos ofrecerle atención personalizada de acuerdo a sus necesidades y presupuesto."
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/aboutUs2img"
+                android:layout_width="match_parent"
+                android:layout_height="283dp"
+                android:src="@drawable/about_us2" />
+
+            <TextView
+                android:id="@+id/missionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:text="Misión"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/missionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="En Expertos Travel Agency, nuestra misión es usted, y por eso es que nos enfocamos en ofrecer un producto turístico de calidad, inolvidable; brindándole a ustedes nuestros clientes, el mejor servicio y atención, de acuerdo con sus expectativas y necesidades. No importa si es su primera vez en Costa Rica o no, nos esforzaremos en hacer de sus vacaciones una aventura única y diferente."
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/aboutUs3img"
+                android:layout_width="match_parent"
+                android:layout_height="283dp"
+                android:src="@drawable/about_us3" />
+
+            <TextView
+                android:id="@+id/vissionTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:text="Visión"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/vissionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Siempre cumplir los programas y acciones establecidas con el objetivo de resguardar nuestro mayor tesoro, nuestra biodiversidad y cultura, queremos mostrar a nuestros clientes que podemos dirigir un negocio exitoso, generar empleo. Y lo más importante salva guardar para los generaciones presentes y futuras, visitantes nacionales y extranjeros la belleza natural de Costa Rica, de la mano de las buenas prácticas y el Turismo Sostenible. ¡Cuidamos a nuestros clientes tanto como cuidamos nuestra flora y fauna!"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

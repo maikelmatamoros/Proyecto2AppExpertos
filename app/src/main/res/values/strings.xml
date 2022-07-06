@@ -7,19 +7,95 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-
+    <!-- Opciones del menu -->
     <string name="menu_home">Inicio</string>
-    <string name="menu_hotel">Hoteles</string>
+    <string name="menu_hotel">Alojamiento</string>
     <string name="menu_car">Rent-a-Car</string>
     <string name="menu_gallery">Galería</string>
     <string name="menu_tips">Tips</string>
-    <string name="menu_atractivos">Atráctivos</string>
-    <string name="menu_slideshow">Slideshow</string>s
+    <string name="menu_atractivos">Atractivos/Actividades</string>
+    <string name="menu_aboutUs">¿Quiénes Somos?</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Opciones de los spinners de atractivos -->
+    <!-- Presupuesto -->
+    <string-array name="budget_array">
+        <item>Menos de 10000</item>
+        <item>Más de 10000 y menos de 50000</item>
+        <item>Más de 50000</item>
+    </string-array>
+
+    <!-- Tipo de turismo -->
+    <string-array name="type_tourism_array">
+        <item>Tranquilo</item>
+        <item>Aventura</item>
+        <item>Extremo</item>
+        <item>Explorador</item>
+    </string-array>
+
+    <!-- Tipo de ambiente -->
+    <string-array name="type_environment_array">
+        <item>Museo</item>
+        <item>Montaña</item>
+        <item>Playa</item>
+        <item>Volcán</item>
+        <item>Mar</item>
+        <item>Reserva</item>
+        <item>Parque</item>
+    </string-array>
+
+    <!-- Estrellas -->
+    <string-array name="stars_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Opciones de los spinners de alojamiento -->
+    <!-- Tipo de alojamiento -->
+    <string-array name="hotel_type_array">
+        <item>Montaña</item>
+        <item>Ciudad</item>
+        <item>Cerca Aeropuerto</item>
+        <item>Turismo Rural</item>
+        <item>De Playa</item>
+    </string-array>
+
+    <!-- Zona Turistica -->
+    <string-array name="touristic_zone_array">
+        <item>Guanacaste</item>
+        <item>Caribe</item>
+        <item>Puntarenas</item>
+        <item>Valle Central</item>
+        <item>Llanuras del Norte</item>
+        <item>Pacífico Central</item>
+        <item>Pacífico Sur</item>
+    </string-array>
+
+    <!-- Opciones de los spinners de rent a car -->
+    <!-- Tipo de carro -->
+    <string-array name="car_type_array">
+        <item>Sedan</item>
+        <item>SUV</item>
+        <item>Motocicleta</item>
+    </string-array>
+
+    <!-- Provincias -->
+    <string-array name="provinces_array">
+        <item>Cartago</item>
+        <item>San José</item>
+        <item>Heredia</item>
+        <item>Alajuela</item>
+        <item>Puntarenas</item>
+        <item>Guanacaste</item>
+        <item>Limón</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
 
-
     <string name="tips_title">Viva aventuras de forma segura</string>
-
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Vacunas_Title">Vacunas</string>

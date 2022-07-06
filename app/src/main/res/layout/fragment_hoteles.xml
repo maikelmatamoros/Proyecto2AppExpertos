@@ -6,21 +6,117 @@
     android:layout_height="match_parent"
     tools:context=".HotelesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/menu_hotel"
-            android:textSize="48sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <VideoView
+                    android:id="@+id/videoViewHotels"
+                    android:layout_width="377dp"
+                    android:layout_height="179dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/hotelsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Decidir donde quedarse durante su visita en Costa Rica es uno de los temas más difíciles a la hora de planear su viaje. Y más difícil es decidir entre los cientos de opciones de hospedaje que tiene el país para ofrecerle: lodge de montaña, hoteles todo incluido, opciones de lujo en ciudad, montaña y playa; acogedoras cabañas para una salida romántica o luna de miel. \n \nExpertos Travel Agency, le ofrece una exclusiva colección de hoteles que han cumplido con un proceso de verificación para obtener la declaratoria turística o la Certificación de Sostenibilidad Turística (CST). Aquí podrá obtener recomendaciones de alojamiento de acuerdo a la zona turística, lugares turísticos, o tipo de hotel: montaña, ciudad, cerca de los aeropuertos, turismo rural, entre otros. \n \nCosta Rica es un destino para viajar durante todo el año, que ofrece una amplia variedad de hoteles para todos los presupuestos; sin embargo, la mayoría de estos hoteles son pequeños y tienden a tener poca disponibilidad de espacio, especialmente durante la temporada alta. Planifique su viaje con anticipación, al menos dos meses durante la temporada baja y seis meses durante la temporada alta (diciembre a marzo)."
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="398dp"
+                android:layout_height="284dp"
+                android:src="@drawable/hotel_1" />
+
+            <TextView
+                android:id="@+id/whereTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="¿Dónde Hospedarse?"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/whereText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="¿Hotel de montaña? ¿Hoteles todo incluido? ¿Lujo? ¿Montaña y playa? ¿Acogedoras cabañas para una escapada romántica o luna de miel? Un hostal tal vez? Y es más difícil decidir entre los cientos de opciones de alojamiento que ofrece Costa Rica, y una amplia variedad para todos los presupuestos. \n \n- No importa cuál elija, al reservar un hotel solicite una confirmación por escrito del servicio y la política de cancelación. \n- Se recomienda no brindar información sobre su tarjeta de débito o crédito por teléfono. \n- Los tomas de corriente son de 110 V, con enchufes estándar de EE. UU. de dos clavijas. \n- Use la caja fuerte del hotel o alojamiento. \n- Cuando realice un recorrido cerca de su hotel, lleve una copia de su pasaporte. \n- Solicite en la recepción las rutas y medios de transporte más seguros, especialmente durante la noche."
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/insertHotelTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:justificationMode="inter_word"
+                android:text="Ingrese la siguiente información para utilizar el recomendador de alojamientos:"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/hotelType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccionar el tipo de alojamiento:"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/hotelTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/hotel_type_array"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/touristicZoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccionar la zona turística deseada:"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/touristicZoneSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/touristic_zone_array"
+                android:minHeight="48dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/searchRentACarBtn"
+                    android:layout_width="152dp"
+                    android:layout_height="54dp"
+                    android:text="Buscar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
