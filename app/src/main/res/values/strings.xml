@@ -17,6 +17,8 @@
     <string name="menu_aboutUs">¿Quiénes Somos?</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <string name="view_tips">Consejos de Viaje</string>
+
     <!-- Opciones de los spinners de atractivos -->
     <!-- Presupuesto -->
     <string-array name="budget_array">
