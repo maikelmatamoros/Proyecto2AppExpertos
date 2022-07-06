@@ -2,24 +2,119 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AtractivosFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Atractivos"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tittleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Los visitantes de nuestro país pueden disfrutar de hermosas playas tropicales, emocionantes aventuras, maravillas de la naturaleza y una interesante cultura, multiples actividades tanto al aire libre como en interiores, todos los componentes necesarios para unas vacaciones ideales. \n \n ¡No es de extrañar que miles de personas hayan hecho de Costa Rica su mejor opción de viaje!"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/insertTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:text="Ingrese la siguiente informacion para ayudarle a encontrar su plan ideal:"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/colonesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Estimado total del presupuesto en colones:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/budgetSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/budget_array"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/typeTourism"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccione el tipo de turismo que desea hacer:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/typeTourismSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/type_tourism_array"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/environmentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccione el tipo de ambiente que desea:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/environmentTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/type_environment_array"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/stars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccionar las estrellas:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/starsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/stars_array"
+                android:minHeight="48dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/searchBtn"
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </FrameLayout>
