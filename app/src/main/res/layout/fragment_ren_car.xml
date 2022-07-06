@@ -6,19 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".RenCarFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/menu_car"
-            android:textSize="48sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:src="@drawable/rent_a_car1" />
+
+            <TextView
+                android:id="@+id/rentACarText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Costa Rica abundante en territorios paradisíacos de playa y montaña, donde hay tanto qué ver y tanto qué disfrutar, que para sacar mejor provecho a unas vacaciones se requiere un vehículo que garantice libertad y autonomía. \n \nEs posible visitar algunos de los parques nacionales naturales en un solo día y disfrutar playas en el término de unas horas. De ahí la importancia de tener a disposición un vehículo de alquiler. \n \nLas compañías de rent a car con las que trabaja Expertos Travel Agency, están dirigidos a todos los y las personas que deseen explorar los tesoros naturales y las bellezas exóticas del país. Ofrecemos una variedad de compañías que estarán comprometidas a satisfacer sus gustos, intereses, necesidades y presupuesto."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/suggestionsTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:justificationMode="inter_word"
+                android:text="A continuación, te damos unas pequeñas sugerencias que puedes seguir a la hora de rentar un automóvil:"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/suggestionsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="1. Busque una empresa responsable. \n2. Haga su reservación con tiempo. \n3. Revise términos del seguro. \n4. Inspeccione el vehículo."
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/insertRentACarTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:justificationMode="inter_word"
+                android:text="Ingrese la siguiente información para utilizar el recomendador de rent a cars:"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/carTypeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccionar el tipo de vehículo a alquilar:"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/carTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/car_type_array"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/provinceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:justificationMode="inter_word"
+                android:text="Seleccionar la provincia deseada:"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/provinceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/provinces_array"
+                android:minHeight="48dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/searchRentACarBtn"
+                    android:layout_width="152dp"
+                    android:layout_height="54dp"
+                    android:text="Buscar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
