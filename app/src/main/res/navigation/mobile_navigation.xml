@@ -35,6 +35,6 @@
     <fragment
         android:id="@+id/tipsFragment"
         android:name="cr.ac.ucr.proyecto2.TipsFragment"
-        android:label="@string/menu_tips"
+        android:label="@string/view_tips"
         tools:layout="@layout/fragment_tips" />
 </navigation>
