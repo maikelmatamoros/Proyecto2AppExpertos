@@ -11,12 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cr.ac.ucr.proyecto2.adapters.RentCarsListAdapter;
 import cr.ac.ucr.proyecto2.databinding.FragmentRenCarBinding;
-import cr.ac.ucr.proyecto2.interfaces.ApiMethods;
+import cr.ac.ucr.proyecto2.interfaces.ApiAdapter;
+import cr.ac.ucr.proyecto2.interfaces.ApiServices;
 import cr.ac.ucr.proyecto2.model.RentCars;
 import cr.ac.ucr.proyecto2.ui.ListAdapter;
 import retrofit2.Call;
@@ -30,14 +33,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Use the {@link RenCarFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RenCarFragment extends Fragment {
+public class RenCarFragment extends Fragment{
+    private ArrayList<RentCars> rentCars;
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private FragmentRenCarBinding binding;
@@ -48,15 +50,7 @@ public class RenCarFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment RenCarFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static RenCarFragment newInstance(String param1, String param2) {
         RenCarFragment fragment = new RenCarFragment();
         Bundle args = new Bundle();
@@ -69,10 +63,11 @@ public class RenCarFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+        /*if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        }*/
+
     }
 
     @Override
@@ -86,20 +81,41 @@ public class RenCarFragment extends Fragment {
         searchRentCarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Spinner carType = (Spinner) root.findViewById(R.id.carTypeSpinner);
                 Spinner province = (Spinner) root.findViewById(R.id.provinceSpinner);
+                Toast.makeText(getActivity(), "Cargando Datos, por favor espere...", Toast.LENGTH_SHORT).show();
+                Call<ArrayList<RentCars>> call= ApiAdapter.getApiService().getRecRentCars(carType.getSelectedItem().toString(), province.getSelectedItem().toString());
+                call.enqueue(new Callback<ArrayList<RentCars>>() {
+                    @Override
+                    public void onResponse(Call<ArrayList<RentCars>> call, Response<ArrayList<RentCars>> response) {
+                        if (response.isSuccessful()){
+                            rentCars=response.body();
 
-                getRecRentCars(root,carType.getSelectedItem().toString(), province.getSelectedItem().toString());
+                            RentCarsListAdapter adapter=new RentCarsListAdapter(rentCars,getContext());
+                            RecyclerView listaRentCars= (RecyclerView) getActivity().findViewById(R.id.recyclerViewRentCars);
+                            listaRentCars.setLayoutManager(new LinearLayoutManager(getContext()));
+                            listaRentCars.setAdapter(adapter);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ArrayList<RentCars>> call, Throwable t) {
+                        Toast.makeText(getContext(), "Ocurrió un error, trate más tarde", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
             }
         });
         return root;
     }
 
-    public void getRecRentCars(View root, String carType, String province) {
+
+ /*   public void getRecRentCars(View root, String carType, String province) {
         Retrofit retrofit = new  Retrofit.Builder().baseUrl("localhost/PhpRest/api/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
-        ApiMethods getRecRentCars = retrofit.create(ApiMethods.class);
+        ApiServices getRecRentCars = retrofit.create(ApiServices.class);
         Call<List <RentCars>> call = getRecRentCars.getRecRentCars(carType, province);
         call.enqueue(new Callback<List<RentCars>>() {
             @Override
@@ -117,8 +133,8 @@ public class RenCarFragment extends Fragment {
             }
         });
     }
-
-    public void init(View root, List <RentCars> listRentCars){
+*/
+/*    public void init(View root, List <RentCars> listRentCars){
         elements = new ArrayList<>();
 
         for (RentCars rentCar : listRentCars)
@@ -132,6 +148,6 @@ public class RenCarFragment extends Fragment {
         recyclerView.setAdapter(listAdapter);
         rentCarAdapter = listAdapter;
 
-    }
+    }*/
 
 }
