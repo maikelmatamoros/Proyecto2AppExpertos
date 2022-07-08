@@ -15,18 +15,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <VideoView
-                    android:id="@+id/videoViewHotels"
-                    android:layout_width="377dp"
-                    android:layout_height="179dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:videoId="QXt21aGi_nQ"
+                app:autoPlay="false" />
 
             <TextView
                 android:id="@+id/hotelsText"
@@ -60,6 +56,12 @@
                 android:justificationMode="inter_word"
                 android:text="¿Hotel de montaña? ¿Hoteles todo incluido? ¿Lujo? ¿Montaña y playa? ¿Acogedoras cabañas para una escapada romántica o luna de miel? Un hostal tal vez? Y es más difícil decidir entre los cientos de opciones de alojamiento que ofrece Costa Rica, y una amplia variedad para todos los presupuestos. \n \n- No importa cuál elija, al reservar un hotel solicite una confirmación por escrito del servicio y la política de cancelación. \n- Se recomienda no brindar información sobre su tarjeta de débito o crédito por teléfono. \n- Los tomas de corriente son de 110 V, con enchufes estándar de EE. UU. de dos clavijas. \n- Use la caja fuerte del hotel o alojamiento. \n- Cuando realice un recorrido cerca de su hotel, lleve una copia de su pasaporte. \n- Solicite en la recepción las rutas y medios de transporte más seguros, especialmente durante la noche."
                 android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"/>
 
             <TextView
                 android:id="@+id/insertHotelTittle"

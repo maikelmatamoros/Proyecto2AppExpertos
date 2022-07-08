@@ -3,10 +3,27 @@ package cr.ac.ucr.proyecto2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cr.ac.ucr.proyecto2.databinding.FragmentRenCarBinding;
+import cr.ac.ucr.proyecto2.interfaces.ApiMethods;
+import cr.ac.ucr.proyecto2.model.RentCars;
+import cr.ac.ucr.proyecto2.ui.ListAdapter;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +40,9 @@ public class RenCarFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private FragmentRenCarBinding binding;
+    private List<ListElement> elements;
+    private ListAdapter rentCarAdapter;
 
     public RenCarFragment() {
         // Required empty public constructor
@@ -59,6 +79,59 @@ public class RenCarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ren_car, container, false);
+        binding = FragmentRenCarBinding.inflate(inflater,container,false);
+        View root = binding.getRoot();
+
+        Button searchRentCarBtn = (Button) root.findViewById(R.id.searchRentACarBtn);
+        searchRentCarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Spinner carType = (Spinner) root.findViewById(R.id.carTypeSpinner);
+                Spinner province = (Spinner) root.findViewById(R.id.provinceSpinner);
+
+                getRecRentCars(root,carType.getSelectedItem().toString(), province.getSelectedItem().toString());
+            }
+        });
+        return root;
     }
+
+    public void getRecRentCars(View root, String carType, String province) {
+        Retrofit retrofit = new  Retrofit.Builder().baseUrl("localhost/PhpRest/api/")
+                .addConverterFactory(GsonConverterFactory.create()).build();
+
+        ApiMethods getRecRentCars = retrofit.create(ApiMethods.class);
+        Call<List <RentCars>> call = getRecRentCars.getRecRentCars(carType, province);
+        call.enqueue(new Callback<List<RentCars>>() {
+            @Override
+            public void onResponse(Call<List<RentCars>> call, Response<List<RentCars>> response) {
+                if(response.isSuccessful()){
+                    List<RentCars> listRentCars = response.body();
+                    init(root,listRentCars);
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<RentCars>> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void init(View root, List <RentCars> listRentCars){
+        elements = new ArrayList<>();
+
+        for (RentCars rentCar : listRentCars)
+        {
+            elements.add(new ListElement(rentCar.getNombre(), rentCar.getDescripcion(),rentCar.getTelefono(), rentCar.getSitioWeb(),rentCar.getImagen(),rentCar.getEstrellas()));
+        }
+
+        ListAdapter listAdapter =  new ListAdapter(elements, root.getContext());
+        RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerViewRentCars);
+        recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
+        recyclerView.setAdapter(listAdapter);
+        rentCarAdapter = listAdapter;
+
+    }
+
 }
