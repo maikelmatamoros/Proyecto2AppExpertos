@@ -2,6 +2,7 @@ package cr.ac.ucr.proyecto2.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +29,9 @@ public class HotelsListAdapter extends RecyclerView.Adapter<HotelsListAdapter.Ho
     private List<Hotels> hotelsList;
     private Context context;
 
-
+    public Context getContext() {
+        return context;
+    }
 
     public HotelsListAdapter(ArrayList<Hotels> hotelsList, Context context) {
         this.hotelsList = hotelsList;
@@ -55,7 +60,18 @@ public class HotelsListAdapter extends RecyclerView.Adapter<HotelsListAdapter.Ho
         holder.estrellas.setText(hotels.getEstrellas() + " estrellas");
         holder.web.setText(hotels.getSitioWeb());
         holder.web.setTextColor(Color.BLUE);
-        holder.img.setBackgroundResource(R.drawable.tips);
+
+        try {
+            InputStream ims = getContext().getAssets().open("img_hotels/"+hotels.getImagen());
+            Drawable d = Drawable.createFromStream(ims, null);
+            holder.img.setImageDrawable(d);
+            ims.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        //holder.img.setBackgroundResource(R.drawable.tips);
 
         holder.itemLayout.setOnClickListener(new View.OnClickListener() {
             @Override

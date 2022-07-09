@@ -43,12 +43,6 @@
                 android:text="Somos una empresa conformada por un grupo de amigos, ubicada en el cantón de Turrialba. Estamos más que ansiosos por brindarle el mejor servicio y atención. Debido al amor que sentimos por nuestro país, nos complace compartir Costa Rica con usted. El turismo ha sido nuestro negocio durante muchos años y eso nos ha brindado la experiencia que necesitamos para satisfacer sus necesidades. Podemos ofrecerle atención personalizada de acuerdo a sus necesidades y presupuesto."
                 android:textSize="16sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/darker_gray"/>
-
             <ImageView
                 android:id="@+id/aboutUs2img"
                 android:layout_width="match_parent"
@@ -74,12 +68,6 @@
                 android:text="En Expertos Travel Agency, nuestra misión es usted, y por eso es que nos enfocamos en ofrecer un producto turístico de calidad, inolvidable; brindándole a ustedes nuestros clientes, el mejor servicio y atención, de acuerdo con sus expectativas y necesidades. No importa si es su primera vez en Costa Rica o no, nos esforzaremos en hacer de sus vacaciones una aventura única y diferente."
                 android:textSize="16sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/darker_gray"/>
-
             <ImageView
                 android:id="@+id/aboutUs3img"
                 android:layout_width="match_parent"
@@ -104,12 +92,6 @@
                 android:justificationMode="inter_word"
                 android:text="Siempre cumplir los programas y acciones establecidas con el objetivo de resguardar nuestro mayor tesoro, nuestra biodiversidad y cultura, queremos mostrar a nuestros clientes que podemos dirigir un negocio exitoso, generar empleo. Y lo más importante salva guardar para los generaciones presentes y futuras, visitantes nacionales y extranjeros la belleza natural de Costa Rica, de la mano de las buenas prácticas y el Turismo Sostenible. ¡Cuidamos a nuestros clientes tanto como cuidamos nuestra flora y fauna!"
                 android:textSize="16sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/darker_gray"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view"

@@ -57,12 +57,6 @@
                 android:text="¿Hotel de montaña? ¿Hoteles todo incluido? ¿Lujo? ¿Montaña y playa? ¿Acogedoras cabañas para una escapada romántica o luna de miel? Un hostal tal vez? Y es más difícil decidir entre los cientos de opciones de alojamiento que ofrece Costa Rica, y una amplia variedad para todos los presupuestos. \n \n- No importa cuál elija, al reservar un hotel solicite una confirmación por escrito del servicio y la política de cancelación. \n- Se recomienda no brindar información sobre su tarjeta de débito o crédito por teléfono. \n- Los tomas de corriente son de 110 V, con enchufes estándar de EE. UU. de dos clavijas. \n- Use la caja fuerte del hotel o alojamiento. \n- Cuando realice un recorrido cerca de su hotel, lleve una copia de su pasaporte. \n- Solicite en la recepción las rutas y medios de transporte más seguros, especialmente durante la noche."
                 android:textSize="16sp"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/darker_gray"/>
-
             <TextView
                 android:id="@+id/insertHotelTittle"
                 android:layout_width="match_parent"

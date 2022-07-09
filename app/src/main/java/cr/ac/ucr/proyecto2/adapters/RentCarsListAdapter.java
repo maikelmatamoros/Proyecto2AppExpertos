@@ -2,6 +2,7 @@ package cr.ac.ucr.proyecto2.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +27,9 @@ public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapte
     private List<RentCars> rentCarsList;
     private Context context;
 
-
+    public Context getContext() {
+        return context;
+    }
 
     public RentCarsListAdapter(ArrayList<RentCars> rentCarsList, Context context) {
         this.rentCarsList = rentCarsList;
@@ -53,7 +58,15 @@ public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapte
         holder.estrellas.setText(rentCars.getEstrellas() + " estrellas");
         holder.web.setText(rentCars.getSitioWeb());
         holder.web.setTextColor(Color.BLUE);
-        holder.img.setBackgroundResource(R.drawable.tips);
+
+        try {
+            InputStream ims = getContext().getAssets().open("img_rentcars/"+rentCars.getImagen());
+            Drawable d = Drawable.createFromStream(ims, null);
+            holder.img.setImageDrawable(d);
+            ims.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         holder.itemLayout.setOnClickListener(new View.OnClickListener() {
             @Override
