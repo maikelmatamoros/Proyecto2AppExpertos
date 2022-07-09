@@ -6,17 +6,207 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/img_home_page">
+
+            </ImageView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_banner2"></ImageView>
+
+                <TextView
+                    android:id="@+id/textview_atractivos_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="#BE202020"
+                    android:text="¿BUSCANDO UN POCO DE AVENTURA?"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_atractivos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="122dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="#BE202020"
+                    android:text="Bueno, entonces no busque más! Ofrecemos una amplia variedad de atractivos turísticos en Costa Rica. Con actividades y lugares que satisfarán incluso al adicto de adrenalina. Los surfistas se han reunido en este país desde hace años. Todo debido a la consistencia calidad de las olas que se encuentran en ambas costas. Pavones es famoso por ser el segundo más largo “leftbreak” del mundo. Además,Roca Bruja apareció en la película ‘Endless Summer’. Costa Rica ha sido aclamado como un destino turístico caliente durante muchos años."
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_banner3">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textview_alojamiento_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="#BE202020"
+                    android:text="DIVERSAS FORMAS DE ALOJAMIENTO PARA ORGANIZAR TU ESTANCIA EN COSTA RICA"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_alojamientos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="175dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="#BE202020"
+                    android:text="Costa Rica ofrece una amplia variedad de tipos alojamiento en la mayoría de sus ciudades y pueblos en los que podrás hospedarte y conocer todos sus lugares. En todas sus ciudades podrás encontrar hoteles adaptados a todos los bolsillos. El precio medio de una habitación ronda entre los $10 y $30 por persona y día. Todos suelen estar bien equipados con aire acondicionado, televisión y cama limpia."
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_banner4">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textview_rentcar_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="#BE202020"
+                    android:text="¿CON GANAS DE UNA ESCAPA RÁPIDA A UN DESTINO DIFERENTE Y NO TIENES VEHÍCULO?"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_rentcar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="175dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="#BE202020"
+                    android:text="Con poco más de 50.000 kilómetros, Costa Rica es un país diez veces menos extenso que España, por lo que rentar un vehículo te va a permitir desplazarte cómodamente por allí y aprovechar hasta el último segundo de tu viaje. En Expertos Travel Agency podrás encontrar diversos tipos de vehículos para rentar a manos de las mejores compañías de Costa Rica. Las compañías con las que trabajamos, le ofrecen vehículos a la medida a los mejores precios del mercado."
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_banner5"></ImageView>
+
+                <TextView
+                    android:id="@+id/textview_tips_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="#BE202020"
+                    android:text="¿NECESITAS CONSEJOS PARA VIAJAR?"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="145dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="#BE202020"
+                    android:text="Quizá mucha gente piense que viajar, solamente se trata de pasear y disfrutar, pero hay cosas que pueden complicar la ruta o la estadía en un nuestro país. Por lo tanto, si nunca has viajado o si tu idea es empezar a hacerlo con mucha más frecuencia, estos tips de viaje te ayudarán a estar alerta y conocer las cosas que podrían salir mal, y cómo resolverlas."
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
