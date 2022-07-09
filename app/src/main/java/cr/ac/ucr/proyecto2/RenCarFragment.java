@@ -19,14 +19,11 @@ import java.util.List;
 import cr.ac.ucr.proyecto2.adapters.RentCarsListAdapter;
 import cr.ac.ucr.proyecto2.databinding.FragmentRenCarBinding;
 import cr.ac.ucr.proyecto2.interfaces.ApiAdapter;
-import cr.ac.ucr.proyecto2.interfaces.ApiServices;
 import cr.ac.ucr.proyecto2.model.RentCars;
 import cr.ac.ucr.proyecto2.ui.ListAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,11 +60,6 @@ public class RenCarFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }*/
-
     }
 
     @Override
@@ -77,14 +69,14 @@ public class RenCarFragment extends Fragment{
         binding = FragmentRenCarBinding.inflate(inflater,container,false);
         View root = binding.getRoot();
 
-        Button searchRentCarBtn = (Button) root.findViewById(R.id.searchRentACarBtn);
+        Button searchRentCarBtn = (Button) root.findViewById(R.id.searchHotelBtn);
         searchRentCarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Spinner carType = (Spinner) root.findViewById(R.id.carTypeSpinner);
                 Spinner province = (Spinner) root.findViewById(R.id.provinceSpinner);
-                Toast.makeText(getActivity(), "Cargando Datos, por favor espere...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Cargando datos, por favor espere...", Toast.LENGTH_SHORT).show();
                 Call<ArrayList<RentCars>> call= ApiAdapter.getApiService().getRecRentCars(carType.getSelectedItem().toString(), province.getSelectedItem().toString());
                 call.enqueue(new Callback<ArrayList<RentCars>>() {
                     @Override
@@ -93,7 +85,7 @@ public class RenCarFragment extends Fragment{
                             rentCars=response.body();
 
                             RentCarsListAdapter adapter=new RentCarsListAdapter(rentCars,getContext());
-                            RecyclerView listaRentCars= (RecyclerView) getActivity().findViewById(R.id.recyclerViewRentCars);
+                            RecyclerView listaRentCars= (RecyclerView) getActivity().findViewById(R.id.recyclerViewHotels);
                             listaRentCars.setLayoutManager(new LinearLayoutManager(getContext()));
                             listaRentCars.setAdapter(adapter);
                         }
@@ -101,7 +93,7 @@ public class RenCarFragment extends Fragment{
 
                     @Override
                     public void onFailure(Call<ArrayList<RentCars>> call, Throwable t) {
-                        Toast.makeText(getContext(), "Ocurrió un error, trate más tarde", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "No hay resultados para su búsqueda. Por favor cambie sus criterios de búsqueda.", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -109,45 +101,5 @@ public class RenCarFragment extends Fragment{
         });
         return root;
     }
-
-
- /*   public void getRecRentCars(View root, String carType, String province) {
-        Retrofit retrofit = new  Retrofit.Builder().baseUrl("localhost/PhpRest/api/")
-                .addConverterFactory(GsonConverterFactory.create()).build();
-
-        ApiServices getRecRentCars = retrofit.create(ApiServices.class);
-        Call<List <RentCars>> call = getRecRentCars.getRecRentCars(carType, province);
-        call.enqueue(new Callback<List<RentCars>>() {
-            @Override
-            public void onResponse(Call<List<RentCars>> call, Response<List<RentCars>> response) {
-                if(response.isSuccessful()){
-                    List<RentCars> listRentCars = response.body();
-                    init(root,listRentCars);
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<List<RentCars>> call, Throwable t) {
-
-            }
-        });
-    }
-*/
-/*    public void init(View root, List <RentCars> listRentCars){
-        elements = new ArrayList<>();
-
-        for (RentCars rentCar : listRentCars)
-        {
-            elements.add(new ListElement(rentCar.getNombre(), rentCar.getDescripcion(),rentCar.getTelefono(), rentCar.getSitioWeb(),rentCar.getImagen(),rentCar.getEstrellas()));
-        }
-
-        ListAdapter listAdapter =  new ListAdapter(elements, root.getContext());
-        RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerViewRentCars);
-        recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        recyclerView.setAdapter(listAdapter);
-        rentCarAdapter = listAdapter;
-
-    }*/
 
 }

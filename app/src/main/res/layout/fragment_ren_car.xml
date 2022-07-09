@@ -111,7 +111,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/searchRentACarBtn"
+                    android:id="@+id/searchHotelBtn"
                     android:layout_width="152dp"
                     android:layout_height="54dp"
                     android:text="Buscar"
@@ -120,9 +120,10 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewRentCars"
+                android:id="@+id/recyclerViewHotels"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp" />
 
         </LinearLayout>
     </ScrollView>

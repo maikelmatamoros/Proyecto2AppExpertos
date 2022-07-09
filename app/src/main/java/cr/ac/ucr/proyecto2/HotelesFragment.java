@@ -2,11 +2,30 @@ package cr.ac.ucr.proyecto2;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cr.ac.ucr.proyecto2.adapters.HotelsListAdapter;
+import cr.ac.ucr.proyecto2.databinding.FragmentHotelesBinding;
+import cr.ac.ucr.proyecto2.databinding.FragmentRenCarBinding;
+import cr.ac.ucr.proyecto2.interfaces.ApiAdapter;
+import cr.ac.ucr.proyecto2.model.Hotels;
+import cr.ac.ucr.proyecto2.ui.ListAdapter;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,8 +33,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HotelesFragment extends Fragment {
+    private ArrayList<Hotels> hotels;
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -23,20 +42,14 @@ public class HotelesFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private @NonNull FragmentHotelesBinding binding;
+    private List<ListElement> elements;
+    private ListAdapter rentCarAdapter;
 
     public HotelesFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HotelesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HotelesFragment newInstance(String param1, String param2) {
         HotelesFragment fragment = new HotelesFragment();
         Bundle args = new Bundle();
@@ -49,16 +62,45 @@ public class HotelesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hoteles, container, false);
+        binding = FragmentHotelesBinding.inflate(inflater,container,false);
+        View root = binding.getRoot();
+
+        Button searchHotelBtn = (Button) root.findViewById(R.id.searchHotelBtn);
+        searchHotelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Spinner hotelType = (Spinner) root.findViewById(R.id.hotelTypeSpinner);
+                Spinner zone = (Spinner) root.findViewById(R.id.touristicZoneSpinner);
+                Toast.makeText(getActivity(), "Cargando datos, por favor espere...", Toast.LENGTH_SHORT).show();
+                Call<ArrayList<Hotels>> call= ApiAdapter.getApiService().getRecHotels(hotelType.getSelectedItem().toString(), zone.getSelectedItem().toString());
+                call.enqueue(new Callback<ArrayList<Hotels>>() {
+                    @Override
+                    public void onResponse(Call<ArrayList<Hotels>> call, Response<ArrayList<Hotels>> response) {
+                        if (response.isSuccessful()){
+                            hotels=response.body();
+
+                            HotelsListAdapter adapter=new HotelsListAdapter(hotels,getContext());
+                            RecyclerView listaHotels= (RecyclerView) getActivity().findViewById(R.id.recyclerViewHotels);
+                            listaHotels.setLayoutManager(new LinearLayoutManager(getContext()));
+                            listaHotels.setAdapter(adapter);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ArrayList<Hotels>> call, Throwable t) {
+                        Toast.makeText(getContext(), "No hay resultados para su búsqueda. Por favor cambie sus criterios de búsqueda.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+        });
+        return root;
     }
 }

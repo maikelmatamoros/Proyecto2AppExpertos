@@ -10,9 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +18,7 @@ import java.util.List;
 import cr.ac.ucr.proyecto2.R;
 import cr.ac.ucr.proyecto2.model.RentCars;
 
-public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapter.RentCarsViewHolder> {
+public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapter.HotelsViewHolder> {
 
 
     private List<RentCars> rentCarsList;
@@ -35,23 +33,24 @@ public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapte
 
     @NonNull
     @Override
-    public RentCarsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HotelsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View listItem = inflater.inflate(R.layout.list_element, parent, false);
-        RentCarsViewHolder viewHolder = new RentCarsViewHolder(listItem);
+        HotelsViewHolder viewHolder = new HotelsViewHolder(listItem);
 
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RentCarsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HotelsViewHolder holder, int position) {
 
         final RentCars rentCars = rentCarsList.get(position);
         holder.nombre.setText(rentCars.getNombre());
+        holder.nombre.setTextColor(Color.BLUE);
         holder.descripcion.setText(rentCars.getDescripcion());
-        holder.telefono.setText("Telefono: "+rentCars.getTelefono());
-        holder.estrellas.setText("Estrellas: "+rentCars.getEstrellas());
+        holder.telefono.setText(rentCars.getTelefono());
+        holder.estrellas.setText(rentCars.getEstrellas() + " estrellas");
         holder.web.setText(rentCars.getSitioWeb());
         holder.web.setTextColor(Color.BLUE);
         holder.img.setBackgroundResource(R.drawable.tips);
@@ -68,13 +67,12 @@ public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapte
 
     @Override
     public int getItemCount() {
-        //Toast.makeText(context, "Tamaño de lista: "+paisesList.size(), Toast.LENGTH_SHORT).show();
         return rentCarsList.size();
     }
 
 
     //View holder para lograr llenar el contenido de cada item
-    public static class RentCarsViewHolder extends RecyclerView.ViewHolder {
+    public static class HotelsViewHolder extends RecyclerView.ViewHolder {
 
         public TextView nombre;
         public TextView descripcion;
@@ -84,7 +82,7 @@ public class RentCarsListAdapter extends RecyclerView.Adapter<RentCarsListAdapte
         public ImageView img;
         public LinearLayout itemLayout;
 
-        public RentCarsViewHolder(@NonNull View itemView) {
+        public HotelsViewHolder(@NonNull View itemView) {
             super(itemView);
             this.nombre = (TextView) itemView.findViewById(R.id.tv_nombre);
             this.descripcion = (TextView) itemView.findViewById(R.id.tv_descripcion);

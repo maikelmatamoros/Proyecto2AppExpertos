@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/drawable/hola.xml" value="0.2545" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.236" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_about_us.xml" value="0.2" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_atractivos.xml" value="0.24547101449275363" />
@@ -10,7 +11,7 @@
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_hoteles.xml" value="0.1" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_ren_car.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_tips.xml" value="0.24547101449275363" />
-        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/list_element.xml" value="0.264" />
+        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/list_element.xml" value="0.1" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/menu/activity_main_drawer.xml" value="0.24489795918367346" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1745" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
