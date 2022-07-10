@@ -6,13 +6,145 @@
     android:layout_height="match_parent"
     tools:context=".ui.gallery.GalleryFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gallery"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/museosTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text=" Museos de Costa Rica"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/museosText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="En Costa Rica, no todo son playas paradisíacas y sorprendentes parques naturales, también tendrás la ocasión de conocer su apasionante historia y cultura, y, para ello, la visita a sus museos es indispensable."
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/museo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/museooro2" />
+
+                <ImageView
+                    android:id="@+id/museo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/museoarte" />
+
+                <TextView
+                    android:id="@+id/montanasTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text=" Montañas"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/montanasText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Costa Rica por su topografía ofrece la oportunidad de vivir experiencias llenas de adrenalina y que mejor que hacerlo rodeado de las preciosas y verdes montañas de nuestro país."
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/montanas1"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/canopymanuelantonio" />
+
+                <ImageView
+                    android:id="@+id/montanas2"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/senderismorainmaker" />
+
+                <TextView
+                    android:id="@+id/playasTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Playas"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/PlayasText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="¿Las mejores playas de Costa Rica están en el Caribe o en el Pacífico? ¡En ambas costas! El territorio costarricense tiene playas preciosas en ambos océanos que merecen ser conocidas."
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/playas1"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/playaroble" />
+
+                <ImageView
+                    android:id="@+id/playas2"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/playaherradura" />
+
+                <TextView
+                    android:id="@+id/volcanesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Volcanes"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/VolcanesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Costa Rica no es solo fauna y bosque. Uno de los mayores atractivos de nuestro país son los volcanes, existentes gracias a que Costa Rica está erigido encima del llamado Cinturón de Fuego del Pacífico."
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/volcanes1"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/volcanpoas2" />
+
+                <ImageView
+                    android:id="@+id/volcanes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:src="@drawable/volcanmiravalles" />
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
