@@ -33,8 +33,9 @@
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
+                    android:layout_height="750dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_banner2"></ImageView>
 
                 <TextView
@@ -57,7 +58,7 @@
                 <TextView
                     android:id="@+id/textview_atractivos"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
@@ -78,8 +79,9 @@
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
+                    android:layout_height="800dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_banner3">
 
                 </ImageView>
@@ -109,7 +111,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="70dp"
-                    android:layout_marginTop="175dp"
+                    android:layout_marginTop="210dp"
                     android:layout_marginEnd="70dp"
                     android:background="#BE202020"
                     android:text="Costa Rica ofrece una amplia variedad de tipos alojamiento en la mayoría de sus ciudades y pueblos en los que podrás hospedarte y conocer todos sus lugares. En todas sus ciudades podrás encontrar hoteles adaptados a todos los bolsillos. El precio medio de una habitación ronda entre los $10 y $30 por persona y día. Todos suelen estar bien equipados con aire acondicionado, televisión y cama limpia."
@@ -127,8 +129,9 @@
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
+                    android:layout_height="800dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_banner4">
 
                 </ImageView>
@@ -173,8 +176,9 @@
                 <ImageView
                     android:id="@+id/imageView7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
+                    android:layout_height="600dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_banner5"></ImageView>
 
                 <TextView
