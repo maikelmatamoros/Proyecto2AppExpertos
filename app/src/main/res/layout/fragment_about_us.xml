@@ -14,7 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            tools:ignore="MissingClass">
 
             <ImageView
                 android:id="@+id/aboutUs1img"
@@ -28,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
                 android:text=" Expertos Travel Agency \n (Naturaleza, aventura y más)"
                 android:textSize="24sp"
                 android:textStyle="bold"/>
@@ -90,6 +92,15 @@
                 android:justificationMode="inter_word"
                 android:text="Siempre cumplir los programas y acciones establecidas con el objetivo de resguardar nuestro mayor tesoro, nuestra biodiversidad y cultura, queremos mostrar a nuestros clientes que podemos dirigir un negocio exitoso, generar empleo. Y lo más importante salva guardar para los generaciones presentes y futuras, visitantes nacionales y extranjeros la belleza natural de Costa Rica, de la mano de las buenas prácticas y el Turismo Sostenible. ¡Cuidamos a nuestros clientes tanto como cuidamos nuestra flora y fauna!"
                 android:textSize="16sp" />
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:videoId="pNTirQ9eoLo"
+                app:autoPlay="false" />
 
         </LinearLayout>
     </ScrollView>

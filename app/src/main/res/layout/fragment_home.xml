@@ -50,6 +50,7 @@
                     android:background="#BE202020"
                     android:text="¿BUSCANDO UN POCO DE AVENTURA?"
                     android:textAlignment="center"
+                    android:textColor="#BAA9A9"
                     android:textSize="23sp"
                     android:textStyle="bold" />
 
@@ -66,6 +67,7 @@
                     android:background="#BE202020"
                     android:text="Bueno, entonces no busque más! Ofrecemos una amplia variedad de atractivos turísticos en Costa Rica. Con actividades y lugares que satisfarán incluso al adicto de adrenalina. Los surfistas se han reunido en este país desde hace años. Todo debido a la consistencia calidad de las olas que se encuentran en ambas costas. Pavones es famoso por ser el segundo más largo “leftbreak” del mundo. Además,Roca Bruja apareció en la película ‘Endless Summer’. Costa Rica ha sido aclamado como un destino turístico caliente durante muchos años."
                     android:textAlignment="center"
+                    android:textColor="#BAA9A9"
                     android:textSize="20sp" />
             </RelativeLayout>
 
@@ -96,6 +98,7 @@
                     android:text="DIVERSAS FORMAS DE ALOJAMIENTO PARA ORGANIZAR TU ESTANCIA EN COSTA RICA"
                     android:textAlignment="center"
                     android:textSize="23sp"
+                    android:textColor="#BAA9A9"
                     android:textStyle="bold" />
 
                 <TextView
@@ -111,6 +114,7 @@
                     android:background="#BE202020"
                     android:text="Costa Rica ofrece una amplia variedad de tipos alojamiento en la mayoría de sus ciudades y pueblos en los que podrás hospedarte y conocer todos sus lugares. En todas sus ciudades podrás encontrar hoteles adaptados a todos los bolsillos. El precio medio de una habitación ronda entre los $10 y $30 por persona y día. Todos suelen estar bien equipados con aire acondicionado, televisión y cama limpia."
                     android:textAlignment="center"
+                    android:textColor="#BAA9A9"
                     android:textSize="20sp" />
 
 
@@ -143,6 +147,7 @@
                     android:text="¿CON GANAS DE UNA ESCAPA RÁPIDA A UN DESTINO DIFERENTE Y NO TIENES VEHÍCULO?"
                     android:textAlignment="center"
                     android:textSize="23sp"
+                    android:textColor="#BAA9A9"
                     android:textStyle="bold" />
 
                 <TextView
@@ -157,6 +162,7 @@
                     android:background="#BE202020"
                     android:text="Con poco más de 50.000 kilómetros, Costa Rica es un país diez veces menos extenso que España, por lo que rentar un vehículo te va a permitir desplazarte cómodamente por allí y aprovechar hasta el último segundo de tu viaje. En Expertos Travel Agency podrás encontrar diversos tipos de vehículos para rentar a manos de las mejores compañías de Costa Rica. Las compañías con las que trabajamos, le ofrecen vehículos a la medida a los mejores precios del mercado."
                     android:textAlignment="center"
+                    android:textColor="#BAA9A9"
                     android:textSize="20sp" />
             </RelativeLayout>
 
@@ -182,6 +188,7 @@
                     android:layout_marginTop="56dp"
                     android:layout_marginEnd="50dp"
                     android:background="#BE202020"
+                    android:textColor="#BAA9A9"
                     android:text="¿NECESITAS CONSEJOS PARA VIAJAR?"
                     android:textAlignment="center"
                     android:textSize="23sp"
@@ -198,6 +205,7 @@
                     android:layout_marginTop="145dp"
                     android:layout_marginEnd="70dp"
                     android:background="#BE202020"
+                    android:textColor="#BAA9A9"
                     android:text="Quizá mucha gente piense que viajar, solamente se trata de pasear y disfrutar, pero hay cosas que pueden complicar la ruta o la estadía en un nuestro país. Por lo tanto, si nunca has viajado o si tu idea es empezar a hacerlo con mucha más frecuencia, estos tips de viaje te ayudarán a estar alerta y conocer las cosas que podrían salir mal, y cómo resolverlas."
                     android:textAlignment="center"
                     android:textSize="20sp" />

@@ -49,6 +49,15 @@
                 android:text="1. Busque una empresa responsable. \n2. Haga su reservación con tiempo. \n3. Revise términos del seguro. \n4. Inspeccione el vehículo."
                 android:textSize="16sp"/>
 
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:videoId="VKucfdYWYDo"
+                app:autoPlay="false" />
+
             <TextView
                 android:id="@+id/insertRentACarTittle"
                 android:layout_width="match_parent"
@@ -96,13 +105,19 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/searchRentACarBtn"
+                    android:id="@+id/searchHotelBtn"
                     android:layout_width="152dp"
                     android:layout_height="54dp"
                     android:text="Buscar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHotels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp" />
 
         </LinearLayout>
     </ScrollView>

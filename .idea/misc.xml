@@ -3,14 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/drawable/hola.xml" value="0.2545" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.236" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_about_us.xml" value="0.2" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_atractivos.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_hoteles.xml" value="0.1" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_ren_car.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/fragment_tips.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/layout/list_element.xml" value="0.1" />
         <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/menu/activity_main_drawer.xml" value="0.24489795918367346" />
+        <entry key="..\:/Users/bryan/Downloads/Proyecto2AppExpertos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1745" />
         <entry key="..\:/Users/hanse/OneDrive/Escritorio/Expertos/Proyecto2AppExpertos/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/hanse/OneDrive/Escritorio/Expertos/Proyecto2AppExpertos/app/src/main/res/drawable-v24/tips_and_updates-48px.xml" value="0.1" />
         <entry key="..\:/Users/hanse/OneDrive/Escritorio/Expertos/Proyecto2AppExpertos/app/src/main/res/drawable/ic_car_rental.xml" value="0.1" />
@@ -35,10 +39,11 @@
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/content_main.xml" value="0.22" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_atractivos.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_gallery.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_hoteles.xml" value="0.33" />
-        <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_ren_car.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_ren_car.xml" value="0.25" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/fragment_tips.xml" value="0.12572161642078256" />
+        <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/list_element.xml" value="0.25" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/layout/nav_header_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/maike/AndroidStudioProjects/Proyecto2/app/src/main/res/menu/main.xml" value="0.20416666666666666" />
