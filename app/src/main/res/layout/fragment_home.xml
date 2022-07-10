@@ -212,6 +212,52 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_banner6"></ImageView>
+
+                <TextView
+                    android:id="@+id/textview_creditos_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="#BE202020"
+                    android:textColor="#BAA9A9"
+                    android:text="CRÉDITOS"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_creditos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="145dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="#BE202020"
+                    android:textColor="#BAA9A9"
+                    android:text="Bryan Keihl \n Maikel Matamoros \n Hansel Araya \n © 2022 Expertos Travel Agency \n Universidad de Costa Rica (UCR), IF7103"
+                    android:textAlignment="center"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
         </LinearLayout>
 
     </ScrollView>
