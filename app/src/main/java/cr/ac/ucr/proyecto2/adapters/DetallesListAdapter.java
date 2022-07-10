@@ -1,14 +1,20 @@
 package cr.ac.ucr.proyecto2.adapters;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -102,6 +108,7 @@ public class DetallesListAdapter extends  RecyclerView.Adapter<DetallesListAdapt
             this.descripcion = (TextView) itemView.findViewById(R.id.detallesDescripcion);
             this.video = (YouTubePlayerView) itemView.findViewById(R.id.youtube_player_view_detalles);
             this.img1 = (ImageView) itemView.findViewById(R.id.imgv_imagen1_detalles);
+
             this.itemLayout = (LinearLayout) itemView.findViewById(R.id.detalles_ly);
         }
     }
