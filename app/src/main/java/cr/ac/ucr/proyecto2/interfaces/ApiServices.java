@@ -1,5 +1,7 @@
 package cr.ac.ucr.proyecto2.interfaces;
 
+import cr.ac.ucr.proyecto2.model.Atractivo;
+import cr.ac.ucr.proyecto2.model.Detalles;
 import cr.ac.ucr.proyecto2.model.Hotels;
 import cr.ac.ucr.proyecto2.model.RentCars;
 
@@ -26,5 +28,13 @@ public interface ApiServices {
 
     @GET("getRecHotels.php")
     public Call<ArrayList<Hotels>> getRecHotels(@Query("hotelType") String hotelType, @Query("zone") String zone);
+
+    @GET("euclidesAtractivos.php")
+    Call<ArrayList<Atractivo>> getRecomendation(@Query("presupuesto") String presupuesto,
+                                                       @Query("tipoTurismo") String tipoTurismo,
+                                                       @Query("tipoAmbiente") String tipoAmbiente,
+                                                       @Query("estrellas") String estrellas);
+    @GET("getAtractivoPorId.php")
+    Call<ArrayList<Detalles>> getAtractivoPorId(@Query("id") String id);
 
 }

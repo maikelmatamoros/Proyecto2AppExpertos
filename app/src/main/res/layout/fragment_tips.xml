@@ -27,20 +27,23 @@
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
-                    android:id="@+id/tipsImg"
-                    android:layout_width="390dp"
-                    android:layout_height="289dp"
-                    android:src="@drawable/tips"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:id="@+id/tipsImg"
+                android:layout_width="390dp"
+                android:layout_height="289dp"
+                android:src="@drawable/tips"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/vacunaTitle"
